@@ -116,7 +116,7 @@ const Grid = ({ users, setUsers, setOnEdit }) => {
 
   const handleDelete = async (id) => {
     await axios
-      .delete("http://localhost:8800/" + id)
+      .delete("https://api-crud-251s.onrender.com/" + id)
       .then(({ data }) => {
         const newArray = users.filter((user) => user.id !== id);
 

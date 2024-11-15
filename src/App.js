@@ -25,7 +25,7 @@ function App() {
   
   const getUsers = async () => {
     try {
-      const res = await axios.get("http://localhost:8800");
+      const res = await axios.get("https://api-crud-251s.onrender.com/");
       setUsers(res.data.sort((a, b) => (a.Equipamento> b.Equipamento? 1 : -1)));
     } catch (error) {
       toast.error(error);

@@ -68,7 +68,7 @@ const Form = ({ getUsers, onEdit, setOnEdit }) => {
 
     if (onEdit) {
       await axios
-        .put("http://localhost:8800/" + onEdit.id, {
+        .put("https://api-crud-251s.onrender.com/" + onEdit.id, {
           Equipamento: user.Equipamento.value,
           Subestacao: user.Subestacao.value,
           plc: user.plc.value,
@@ -78,7 +78,7 @@ const Form = ({ getUsers, onEdit, setOnEdit }) => {
         .catch(({ data }) => toast.error(data));
     } else {
       await axios
-        .post("http://localhost:8800", {
+        .post("https://api-crud-251s.onrender.com/", {
           Equipamento: user.Equipamento.value,
           Subestacao: user.Subestacao.value,
           plc: user.plc.value,
